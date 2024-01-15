@@ -81,6 +81,9 @@ class StoryList {
     const addedStory = new Story(response.data.story);
     this.stories.unshift(addedStory);
     currentUser.ownStories.push(addedStory);
+
+    console.log("Your story has been added!");
+    return addedStory;
   }
 }
 
