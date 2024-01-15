@@ -40,19 +40,20 @@
         <a class="nav-link" href="#" id="nav-login">login/signup</a>
         <a class="nav-link" href="#" id="nav-user-profile"></a>
         <a class="hidden" id="nav-logout" href="#"><small>(logout)</small></a>
+        <a class="nav-link" href="#">submit story</a>
       </div>
     </nav>
 
     <!-- New Story Form -->
     <section class="new-story-form-container">
-      <form id="new-story-form">
-        <label for="new-story-author">Author:</label>
+      <form id="new-story-form" method="post">
+        <label for="new-story-author">author</label>
         <input type="text" class="new-story-author" />
-        <label for="new-story-title">Title:</label>
+        <label for="new-story-title">title</label>
         <input type="text" class="new-story-title" />
-        <label for="new-story-url">URL:</label>
+        <label for="new-story-url">url</label>
         <input type="text" class="new-story-url" />
-        <button type="submit">Submit New Story</button>
+        <button type="submit" id="submit-new-story-btn">submit</button>
       </form>
     </section>
 
