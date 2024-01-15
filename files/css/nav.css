@@ -12,6 +12,15 @@ nav {
   font-weight: bold;
 }
 
+#new-story-form label {
+  text-align: left;
+}
+
+#submit-new-story-btn {
+  padding: 5px;
+  margin-left: 0px;
+}
+
 .nav-link {
   font-size: 0.85rem;
   margin: 0 3px;

@@ -23,6 +23,11 @@ function navLoginClick(evt) {
   $signupForm.show();
 }
 
+function navNewStorySubmit(e) {
+  console.debug("navNewStorySubmit", e);
+  $newStoryForm.show();
+}
+
 $navLogin.on("click", navLoginClick);
 
 /** When a user first logins in, update the navbar to reflect that. */
