@@ -75,8 +75,12 @@ class StoryList {
     const response = await axios({
       url: `${BASE_URL}/stories`,
       method: "POST",
-      data: { story, newStory, token: user.loginToken },
+      data: { story: newStory, token: user.loginToken },
     });
+
+    const addedStory = new Story(response.data.story);
+    this.stories.unshift(addedStory);
+    currentUser.ownStories.push(addedStory);
   }
 }
 
