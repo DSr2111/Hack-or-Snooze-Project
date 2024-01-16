@@ -26,7 +26,6 @@ $navLogin.on("click", navLoginClick);
 
 function navNewStorySubmit(e) {
   console.debug("navNewStorySubmit", e);
-  // $("#new-story-form").removeClass("hidden");
   $("#new-story-form").show();
 }
 
