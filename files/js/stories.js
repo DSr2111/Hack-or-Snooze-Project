@@ -50,3 +50,25 @@ function putStoriesOnPage() {
 
   $allStoriesList.show();
 }
+
+//adding function that is called when users submit a story
+
+async function submitStory(e) {
+  e.preventDefault();
+
+  const title = $(".new-story-title").val;
+  const author = $(".new-story-author").val;
+  const url = $(".new-story-url").val;
+  const username = currentUser.username;
+
+  const newStory = await storyList.addStory(currentUser, {
+    title,
+    author,
+    url,
+    username,
+  });
+
+  const $story = generateStoryMarkup(newStory);
+  $allStoriesList.prepend($story);
+  $("#new-story-form").hide();
+}
