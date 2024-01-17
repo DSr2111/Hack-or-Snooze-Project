@@ -70,5 +70,17 @@ async function submitStory(e) {
 
   const $story = generateStoryMarkup(newStory);
   $allStoriesList.prepend($story);
-  $("#new-story-form").hide();
+  $("#new-story-form").trigger("reset");
+  $("new-story-form").on("submit", submitStory);
+}
+
+//function to delete stories
+
+async function deleteStory(e) {
+  e.preventDefault();
+  const target = e.currentTarget;
+  const storyId = target.closest("li").id;
+
+  await Story.deleteStory(storyId);
+  target.closest("li").remove;
 }
