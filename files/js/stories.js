@@ -70,6 +70,21 @@ function putStoriesOnPage() {
   $allStoriesList.show();
 }
 
+//function to delete a story
+
+async function deleteStory(e) {
+  console.debug("deleteStory");
+
+  const $closestLi = $(evt.target).closest("li");
+  const storyId = $closestLi.attr("id");
+
+  await storyList.removeStory(currentUser, storyId);
+
+  await putUserStoriesOnPage();
+}
+
+$ownStories.on("click", ".trash-can", deleteStory);
+
 //adding function that is called when users submit a story
 
 async function submitStory(e) {
