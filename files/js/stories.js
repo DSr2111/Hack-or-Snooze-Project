@@ -88,6 +88,7 @@ $ownStories.on("click", ".trash-can", deleteStory);
 //adding function that is called when users submit a story
 
 async function submitStory(e) {
+  console.debug("submitNewStory");
   e.preventDefault();
 
   const title = $(".new-story-title").val;
