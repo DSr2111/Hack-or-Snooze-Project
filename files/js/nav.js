@@ -14,6 +14,14 @@ function navAllStories(evt) {
 
 $body.on("click", "#nav-all", navAllStories);
 
+//Showing story submit form
+
+function navNewStorySubmit(e) {
+  console.debug("navNewStorySubmit", e);
+  hidePageComponents();
+  $allStoriesList.show();
+  $("#new-story-form").show();
+}
 /** Show login/signup on click on "login" */
 
 function navLoginClick(evt) {
@@ -23,11 +31,6 @@ function navLoginClick(evt) {
   $signupForm.show();
 }
 $navLogin.on("click", navLoginClick);
-
-function navNewStorySubmit(e) {
-  console.debug("navNewStorySubmit", e);
-  $("#new-story-form").show();
-}
 
 $("#nav-submit").on("click", navNewStorySubmit);
 
