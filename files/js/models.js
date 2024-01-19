@@ -92,6 +92,13 @@ class StoryList {
       method: "DELETE",
       data: { token: user.loginToken },
     });
+
+    // filtering out removed stories using ID
+    this.stories = this.stories.filter((story) => story.storyId !== storyId);
+
+    // Filtering for user favorites and own stories
+    user.ownStories = user.ownStories.filter((s) => s.storyId !== storyId);
+    user.favorites = user.favorites.filter((s) => s.storyId !== storyId);
   }
 }
 
