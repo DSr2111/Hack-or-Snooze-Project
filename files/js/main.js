@@ -12,11 +12,13 @@ const $signupForm = $("#signup-form");
 
 const $submitForm = $("#submit-form");
 
+const $storiesLists = $(".stories-list");
 const $favoritedStories = $("#favorited-stories");
 const $ownStories = $("#my-stories");
 const $storiesContainer = $("#stories-container");
 
 const $navLogin = $("#nav-login");
+const $navSubmitStory = $("#nav-submit");
 const $navUserProfile = $("#nav-user-profile");
 const $navLogOut = $("#nav-logout");
 
