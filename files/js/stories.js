@@ -45,7 +45,7 @@ function addDeleteHTML() {
 }
 
 //Favorite star for stories
-function getStarHTML(story, user) {
+function addStarHTML(story, user) {
   const isFavorite = user.isFavorite(story);
   const starType = isFavorite ? "fas" : "far";
   return `
