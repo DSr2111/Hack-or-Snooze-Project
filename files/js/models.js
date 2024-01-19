@@ -84,6 +84,15 @@ class StoryList {
     console.log("Your story has been added!");
     return addedStory;
   }
+
+  async removeStory(user, storyId) {
+    const token = user.loginToken;
+    await axios({
+      url: `${BASE_URL}/stories/${storyId}`,
+      method: "DELETE",
+      data: { token: user.loginToken },
+    });
+  }
 }
 
 /******************************************************************************
