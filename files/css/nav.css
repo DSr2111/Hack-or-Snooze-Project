@@ -4,7 +4,7 @@ nav {
   display: flex;
   background-color: #ff6600;
   align-items: center;
-  padding: 5px 20px;
+  padding: 25px 20px;
   border-radius: 3px 3px 0 0;
 }
 
@@ -12,13 +12,11 @@ nav {
   font-weight: bold;
 }
 
-#new-story-form label {
-  text-align: left;
-}
-
-#submit-new-story-btn {
-  padding: 5px;
-  margin-left: 0px;
+.main-nav-links {
+  margin: 0 10px;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-link {
