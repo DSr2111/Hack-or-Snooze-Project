@@ -6,19 +6,20 @@ const $body = $("body");
 
 const $storiesLoadingMsg = $("#stories-loading-msg");
 const $allStoriesList = $("#all-stories-list");
+const $favoritedStories = $("#favorited-stories");
+const $ownStories = $("#my-stories");
+const $storiesContainer = $("#stories-container");
+
+// selector that finds all three story lists
+const $storiesLists = $(".stories-list");
 
 const $loginForm = $("#login-form");
 const $signupForm = $("#signup-form");
 
 const $submitForm = $("#submit-form");
 
-const $storiesLists = $(".stories-list");
-const $favoritedStories = $("#favorited-stories");
-const $ownStories = $("#my-stories");
-const $storiesContainer = $("#stories-container");
-
+const $navSubmitStory = $("#nav-submit-story");
 const $navLogin = $("#nav-login");
-const $navSubmitStory = $("#nav-submit");
 const $navUserProfile = $("#nav-user-profile");
 const $navLogOut = $("#nav-logout");
 

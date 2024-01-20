@@ -14,14 +14,38 @@ function navAllStories(evt) {
 
 $body.on("click", "#nav-all", navAllStories);
 
-//Showing story submit form
+/** Show story submit form on clicking story "submit" */
 
-function navNewStorySubmit(e) {
-  console.debug("navNewStorySubmit", e);
+function navSubmitStoryClick(evt) {
+  console.debug("navSubmitStoryClick", evt);
   hidePageComponents();
   $allStoriesList.show();
-  $("#new-story-form").show();
+  $submitForm.show();
 }
+
+$navSubmitStory.on("click", navSubmitStoryClick);
+
+/** Show favorite stories on click on "favorites" */
+
+function navFavoritesClick(evt) {
+  console.debug("navFavoritesClick", evt);
+  hidePageComponents();
+  putFavoritesListOnPage();
+}
+
+$body.on("click", "#nav-favorites", navFavoritesClick);
+
+/** Show My Stories on clicking "my stories" */
+
+function navMyStories(evt) {
+  console.debug("navMyStories", evt);
+  hidePageComponents();
+  putUserStoriesOnPage();
+  $ownStories.show();
+}
+
+$body.on("click", "#nav-my-stories", navMyStories);
+
 /** Show login/signup on click on "login" */
 
 function navLoginClick(evt) {
@@ -29,16 +53,26 @@ function navLoginClick(evt) {
   hidePageComponents();
   $loginForm.show();
   $signupForm.show();
+  $storiesContainer.hide();
 }
+
 $navLogin.on("click", navLoginClick);
 
-$("#nav-submit").on("click", navNewStorySubmit);
+/** Hide everything but profile on click on "profile" */
+
+function navProfileClick(evt) {
+  console.debug("navProfileClick", evt);
+  hidePageComponents();
+  $userProfile.show();
+}
+
+$navUserProfile.on("click", navProfileClick);
 
 /** When a user first logins in, update the navbar to reflect that. */
 
 function updateNavOnLogin() {
   console.debug("updateNavOnLogin");
-  $(".main-nav-links").show();
+  $(".main-nav-links").css("display", "flex");
   $navLogin.hide();
   $navLogOut.show();
   $navUserProfile.text(`${currentUser.username}`).show();
