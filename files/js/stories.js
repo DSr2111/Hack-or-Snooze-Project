@@ -31,7 +31,7 @@ function generateStoryMarkup(story, showDeleteBtn = false) {
       <li id="${story.storyId}">
         <div>
         ${showDeleteBtn ? addDeleteHTML() : ""}
-        ${showStar ? getStarHTML(story, currentUser) : ""}
+        ${showStar ? addStarHTML(story, currentUser) : ""}
         <a href="${story.url}" target="a_blank" class="story-link">
           ${story.title}
         </a>
@@ -61,6 +61,8 @@ function addStarHTML(story, user) {
         <i class="${starType} fa-star"></i>
       </span>`;
 }
+
+$allStoriesList.on("click", ".star", );
 
 /** Gets list of stories from server, generates their HTML, and puts on page. */
 
@@ -127,3 +129,5 @@ async function deleteStory(e) {
   await Story.deleteStory(storyId);
   target.closest("li").remove;
 }
+
+//add async for favorite 
